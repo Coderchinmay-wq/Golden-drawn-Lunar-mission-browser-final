@@ -1,0 +1,167 @@
+[
+  {
+    "siteName": "Shackleton Crater Rim",
+    "lon": 129.0,
+    "lat": -89.68,
+    "heightKm": 1.54,
+    "epochIso": "2027-03-01T00:00:00Z",
+    "sunAzDeg": 136.509662,
+    "sunElDeg": -0.802087,
+    "earthAzDeg": 235.088233,
+    "earthElDeg": -6.434384
+  },
+  {
+    "siteName": "Shackleton Crater Rim",
+    "lon": 129.0,
+    "lat": -89.68,
+    "heightKm": 1.54,
+    "epochIso": "2027-06-15T12:00:00Z",
+    "sunAzDeg": 277.044906,
+    "sunElDeg": -1.150512,
+    "earthAzDeg": 236.740415,
+    "earthElDeg": -7.101491
+  },
+  {
+    "siteName": "Shackleton Crater Rim",
+    "lon": 129.0,
+    "lat": -89.68,
+    "heightKm": 1.54,
+    "epochIso": "2027-09-23T06:00:00Z",
+    "sunAzDeg": 138.748329,
+    "sunElDeg": 0.946267,
+    "earthAzDeg": 226.345869,
+    "earthElDeg": 4.014599
+  },
+  {
+    "siteName": "Shackleton Crater Rim",
+    "lon": 129.0,
+    "lat": -89.68,
+    "heightKm": 1.54,
+    "epochIso": "2027-12-21T18:00:00Z",
+    "sunAzDeg": 129.106647,
+    "sunElDeg": 0.633266,
+    "earthAzDeg": 236.371833,
+    "earthElDeg": -6.915248
+  },
+  {
+    "siteName": "Shackleton Crater Rim",
+    "lon": 129.0,
+    "lat": -89.68,
+    "heightKm": 1.54,
+    "epochIso": "2028-02-10T03:00:00Z",
+    "sunAzDeg": 236.400715,
+    "sunElDeg": -0.674347,
+    "earthAzDeg": 229.24467,
+    "earthElDeg": -1.843693
+  },
+  {
+    "siteName": "Malapert Massif",
+    "lon": 2.7,
+    "lat": -86.0,
+    "heightKm": 4.85,
+    "epochIso": "2027-03-01T00:00:00Z",
+    "sunAzDeg": 262.869027,
+    "sunElDeg": -1.068642,
+    "earthAzDeg": 1.353575,
+    "earthElDeg": -2.25414
+  },
+  {
+    "siteName": "Malapert Massif",
+    "lon": 2.7,
+    "lat": -86.0,
+    "heightKm": 4.85,
+    "epochIso": "2027-06-15T12:00:00Z",
+    "sunAzDeg": 43.351159,
+    "sunElDeg": 1.71976,
+    "earthAzDeg": 2.991565,
+    "earthElDeg": -2.933498
+  },
+  {
+    "siteName": "Malapert Massif",
+    "lon": 2.7,
+    "lat": -86.0,
+    "heightKm": 4.85,
+    "epochIso": "2027-09-23T06:00:00Z",
+    "sunAzDeg": 264.973879,
+    "sunElDeg": 0.838713,
+    "earthAzDeg": 352.60534,
+    "earthElDeg": 8.204051
+  },
+  {
+    "siteName": "Malapert Massif",
+    "lon": 2.7,
+    "lat": -86.0,
+    "heightKm": 4.85,
+    "epochIso": "2027-12-21T18:00:00Z",
+    "sunAzDeg": 255.381079,
+    "sunElDeg": -0.174081,
+    "earthAzDeg": 2.626771,
+    "earthElDeg": -2.744299
+  },
+  {
+    "siteName": "Malapert Massif",
+    "lon": 2.7,
+    "lat": -86.0,
+    "heightKm": 4.85,
+    "epochIso": "2028-02-10T03:00:00Z",
+    "sunAzDeg": 2.702934,
+    "sunElDeg": 3.498303,
+    "earthAzDeg": 355.535023,
+    "earthElDeg": 2.352666
+  },
+  {
+    "siteName": "Connecting Ridge",
+    "lon": -136.0,
+    "lat": -89.45,
+    "heightKm": 1.42,
+    "epochIso": "2027-03-01T00:00:00Z",
+    "sunAzDeg": 41.509985,
+    "sunElDeg": -0.158069,
+    "earthAzDeg": 140.021738,
+    "earthElDeg": -6.672623
+  },
+  {
+    "siteName": "Connecting Ridge",
+    "lon": -136.0,
+    "lat": -89.45,
+    "heightKm": 1.42,
+    "epochIso": "2027-06-15T12:00:00Z",
+    "sunAzDeg": 182.038923,
+    "sunElDeg": -1.739393,
+    "earthAzDeg": 141.667499,
+    "earthElDeg": -7.357315
+  },
+  {
+    "siteName": "Connecting Ridge",
+    "lon": -136.0,
+    "lat": -89.45,
+    "heightKm": 1.42,
+    "epochIso": "2027-09-23T06:00:00Z",
+    "sunAzDeg": 43.753601,
+    "sunElDeg": 1.584151,
+    "earthAzDeg": 131.394819,
+    "earthElDeg": 3.87186
+  },
+  {
+    "siteName": "Connecting Ridge",
+    "lon": -136.0,
+    "lat": -89.45,
+    "heightKm": 1.42,
+    "epochIso": "2027-12-21T18:00:00Z",
+    "sunAzDeg": 34.109187,
+    "sunElDeg": 1.290505,
+    "earthAzDeg": 141.300849,
+    "earthElDeg": -7.167164
+  },
+  {
+    "siteName": "Connecting Ridge",
+    "lon": -136.0,
+    "lat": -89.45,
+    "heightKm": 1.42,
+    "epochIso": "2028-02-10T03:00:00Z",
+    "sunAzDeg": 141.393731,
+    "sunElDeg": -0.927071,
+    "earthAzDeg": 134.227842,
+    "earthElDeg": -2.018396
+  }
+]

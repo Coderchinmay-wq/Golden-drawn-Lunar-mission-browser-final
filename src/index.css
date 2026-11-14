@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+    color-scheme: dark;
+  }
+
+  html, body, #root {
+    min-height: 100%;
+    background-color: #07090E;
+    color: #E2E8F0;
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+.font-mono-tabular {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Color-blind-safe hatch patterns for Timeline & Gantt bars */
+.pattern-sun {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    rgba(245, 158, 11, 0.92),
+    rgba(245, 158, 11, 0.92) 6px,
+    rgba(217, 119, 6, 0.92) 6px,
+    rgba(217, 119, 6, 0.92) 10px
+  );
+}
+
+.pattern-earth {
+  background-image: repeating-linear-gradient(
+    45deg,
+    rgba(6, 182, 212, 0.9),
+    rgba(6, 182, 212, 0.9) 4px,
+    rgba(8, 145, 178, 0.9) 4px,
+    rgba(8, 145, 178, 0.9) 8px
+  );
+}
+
+.pattern-both {
+  background-color: #10B981;
+}
+
+.pattern-dark {
+  background-image: repeating-linear-gradient(
+    90deg,
+    rgba(51, 65, 85, 0.65),
+    rgba(51, 65, 85, 0.65) 3px,
+    rgba(30, 41, 59, 0.65) 3px,
+    rgba(30, 41, 59, 0.65) 6px
+  );
+}
+
+/* Custom thin dark scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #07090E;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Print / 1-page PDF helper */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #0f172a !important;
+  }
+}

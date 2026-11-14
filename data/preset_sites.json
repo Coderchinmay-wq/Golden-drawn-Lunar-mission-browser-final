@@ -1,0 +1,79 @@
+[
+  {
+    "id": "shackleton_rim",
+    "name": "Shackleton Crater Rim",
+    "shortName": "Shackleton Rim",
+    "lat": -89.68,
+    "lon": 129.0,
+    "heightKm": 1.54,
+    "color": "#F59E0B",
+    "sourceNote": "NASA Artemis III Candidate Region (Peak Near Shackleton, 89.68°S, 129.0°E). High solar persistence ridge overlooking Shackleton PSR.",
+    "isPreset": true
+  },
+  {
+    "id": "connecting_ridge",
+    "name": "Connecting Ridge",
+    "shortName": "Connecting Ridge",
+    "lat": -89.45,
+    "lon": -136.0,
+    "heightKm": 1.42,
+    "color": "#06B6D4",
+    "sourceNote": "NASA Artemis III Candidate Region (Connecting Ridge between Shackleton & de Gerlache, 89.45°S, 136.0°W / 224.0°E).",
+    "isPreset": true
+  },
+  {
+    "id": "de_gerlache_rim",
+    "name": "de Gerlache Rim",
+    "shortName": "de Gerlache Rim",
+    "lat": -88.50,
+    "lon": -68.0,
+    "heightKm": 1.18,
+    "color": "#10B981",
+    "sourceNote": "NASA Artemis III Candidate Region (de Gerlache Rim 1, 88.50°S, 68.0°W). Flanking permanently shadowed volatile cold traps.",
+    "isPreset": true
+  },
+  {
+    "id": "malapert_massif",
+    "name": "Malapert Massif",
+    "shortName": "Malapert Massif",
+    "lat": -86.00,
+    "lon": 2.7,
+    "heightKm": 4.85,
+    "color": "#A78BFA",
+    "sourceNote": "NASA Artemis III Candidate Region (Malapert Massif, 86.00°S, 2.7°E). ~5 km peak offering prominent Earth line-of-sight.",
+    "isPreset": true
+  },
+  {
+    "id": "nobile_rim",
+    "name": "Nobile Rim",
+    "shortName": "Nobile Rim",
+    "lat": -85.30,
+    "lon": 31.5,
+    "heightKm": 1.65,
+    "color": "#FB7185",
+    "sourceNote": "NASA Artemis III Candidate Region (Nobile Rim 1, 85.30°S, 31.5°E). VIPER/CLPS-class highland rim near Nobile Crater.",
+    "isPreset": true
+  },
+  {
+    "id": "haworth",
+    "name": "Haworth",
+    "shortName": "Haworth",
+    "lat": -87.45,
+    "lon": -5.0,
+    "heightKm": 1.12,
+    "color": "#38BDF8",
+    "sourceNote": "NASA Artemis III Candidate Region (Haworth Crater Rim, 87.45°S, 5.0°W). Ancient South Pole-Aitken basin highland terrain.",
+    "isPreset": true
+  },
+  {
+    "id": "leibnitz_beta",
+    "name": "Leibnitz Beta Plateau (Mons Mouton)",
+    "shortName": "Mons Mouton",
+    "lat": -85.43,
+    "lon": 31.74,
+    "heightKm": 4.62,
+    "color": "#FACC15",
+    "sourceNote": "NASA Artemis III Candidate Region & VIPER target plateau (Mons Mouton / Leibnitz Beta, 85.43°S, 31.74°E).",
+    "isPreset": true
+  }
+]

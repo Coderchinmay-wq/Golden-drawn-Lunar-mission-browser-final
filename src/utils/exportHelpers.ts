@@ -1,0 +1,157 @@
+import { jsPDF } from 'jspdf';
+import type { ComputeResponse } from '../types/mission';
+
+export function downloadTextFile(filename: string, content: string, mimeType: string) {
+  const blob = new Blob([content], { type: mimeType });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
+}
+
+export function exportComputeCsv(data: ComputeResponse) {
+  const header = [
+    'site_id',
+    'site_name',
+    'timestamp_utc',
+    'sun_az_deg',
+    'sun_el_deg',
+    'sun_visible_fraction',
+    'earth_az_deg',
+    'earth_el_deg',
+    'earth_visible',
+    'horizon_sun_el_deg',
+    'horizon_earth_el_deg',
+    'both_visible',
+    'power_factor',
+  ].join(',');
+
+  const rows: string[] = [header];
+  for (const res of data.results) {
+    for (const s of res.samples) {
+      rows.push(
+        [
+          res.site.id,
+          `"${res.site.name}"`,
+          s.timestampIso,
+          s.sunAzDeg,
+          s.sunElDeg,
+          s.sunVisibleFraction,
+          s.earthAzDeg,
+          s.earthElDeg,
+          s.earthVisible,
+          s.horizonSunElDeg,
+          s.horizonEarthElDeg,
+          s.bothVisible,
+          s.powerFactor,
+        ].join(',')
+      );
+    }
+  }
+  downloadTextFile('clps_mission_ephemeris.csv', rows.join('\n'), 'text/csv;charset=utf-8');
+}
+
+export function exportComputeJson(data: ComputeResponse) {
+  downloadTextFile(
+    'clps_mission_ephemeris.json',
+    JSON.stringify(data, null, 2),
+    'application/json;charset=utf-8'
+  );
+}
+
+export function exportOnePagePdfSummary(data: ComputeResponse) {
+  const doc = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+  const { params, results } = data;
+
+  doc.setFillColor(11, 16, 27);
+  doc.rect(0, 0, 210, 30, 'F');
+  doc.setTextColor(248, 250, 252);
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(16);
+  doc.text('CLPS Lunar Mission Browser — One-Page Brief', 14, 14);
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(9.5);
+  doc.setTextColor(148, 163, 184);
+  doc.text(
+    `Window: ${params.start.slice(0, 16).replace('T', ' ')} to ${params.end.slice(0, 16).replace('T', ' ')} UTC  |  Step: ${params.stepMinutes} min`,
+    14,
+    21
+  );
+  doc.text(
+    `Horizon: ${params.horizon_mode === 'terrain' ? 'LRO LOLA 360° Terrain Mask' : 'Smooth Moon (0°)'}  |  Earth Margin: ${params.earth_margin}°  |  Panel: ${params.panel_type}`,
+    14,
+    26
+  );
+
+  let y = 40;
+  doc.setTextColor(15, 23, 42);
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(12);
+  doc.text('Site Performance Summary', 14, y);
+  y += 6;
+
+  // Table header
+  doc.setFillColor(241, 245, 249);
+  doc.rect(14, y, 182, 8, 'F');
+  doc.setFontSize(8.5);
+  doc.text('Site (Lat, Lon)', 16, y + 5.5);
+  doc.text('Sun >0%', 76, y + 5.5);
+  doc.text('Sun 100%', 96, y + 5.5);
+  doc.text('Earth DTE', 116, y + 5.5);
+  doc.text('Both %', 138, y + 5.5);
+  doc.text('Max Night', 156, y + 5.5);
+  doc.text('Max Blackout', 176, y + 5.5);
+  y += 10;
+
+  doc.setFont('helvetica', 'normal');
+  results.forEach((res) => {
+    const m = res.metrics;
+    doc.setFont('helvetica', 'bold');
+    doc.text(res.site.shortName || res.site.name, 16, y + 3);
+    doc.setFont('helvetica', 'normal');
+    doc.setFontSize(7.5);
+    doc.setTextColor(100, 116, 139);
+    doc.text(`${res.site.lat.toFixed(2)}°, ${res.site.lon.toFixed(2)}° (${res.site.heightKm.toFixed(2)} km)`, 16, y + 7);
+    doc.setTextColor(15, 23, 42);
+    doc.setFontSize(8.5);
+    doc.text(`${m.sunlitAnyPct.toFixed(1)}%`, 76, y + 5);
+    doc.text(`${m.sunlitFullPct.toFixed(1)}%`, 96, y + 5);
+    doc.text(`${m.earthVisiblePct.toFixed(1)}%`, 116, y + 5);
+    doc.text(`${m.bothVisiblePct.toFixed(1)}%`, 138, y + 5);
+    doc.text(`${m.longestDarknessHours.toFixed(1)} h`, 156, y + 5);
+    doc.text(`${m.longestEarthBlackoutHours.toFixed(1)} h`, 176, y + 5);
+    doc.setDrawColor(226, 232, 240);
+    doc.line(14, y + 10, 196, y + 10);
+    y += 12;
+  });
+
+  y += 6;
+  doc.setFont('helvetica', 'bold');
+  doc.setFontSize(11);
+  doc.text('Plain-Language Operational Assessment', 14, y);
+  y += 6;
+  doc.setFont('helvetica', 'normal');
+  doc.setFontSize(9);
+
+  results.forEach((res) => {
+    const m = res.metrics;
+    const summary = `• ${res.site.name}: Sunlit ${m.sunlitAnyPct.toFixed(1)}% of mission (${m.sunlitFullPct.toFixed(1)}% full disk); Direct-to-Earth available ${m.earthVisiblePct.toFixed(1)}% of mission; simultaneous power & comms ${m.bothVisiblePct.toFixed(1)}%. Longest eclipse: ${m.longestDarknessHours.toFixed(1)} h; longest comms blackout: ${m.longestEarthBlackoutHours.toFixed(1)} h.`;
+    const wrapped = doc.splitTextToSize(summary, 180);
+    doc.text(wrapped, 14, y);
+    y += wrapped.length * 4.5 + 2.5;
+  });
+
+  doc.setFontSize(8);
+  doc.setTextColor(100, 116, 139);
+  doc.text(
+    'Generated by CLPS Lunar Mission Browser (MOON_ME topocentric model, R_moon = 1737.4 km, LRO LOLA horizon profile).',
+    14,
+    284
+  );
+
+  doc.save('clps_mission_brief.pdf');
+}
