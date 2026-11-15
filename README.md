@@ -1,4 +1,4 @@
-# CLPS Lunar Mission Browser
+# CLPS Lunar Mission Browser (Chandrahasa CLPS)
 
 An interactive lunar south pole mission planning and educational observatory built for the **NASA Space Apps Challenge 2026**. Pick candidate NASA Artemis / CLPS landing sites and date ranges to inspect Sun illumination, Direct-to-Earth (DTE) radio line-of-sight windows, LRO LOLA terrain horizon masking, and optimal launch dates.
 
