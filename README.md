@@ -7,7 +7,7 @@ An interactive lunar south pole mission planning and educational observatory bui
 
 ## 📂 Project Resources
 
-- [Presentations]([PPTs%20and%20other%20docs/Golden%20Drawn%20LUNAR%20PPT.pptx](https://github.com/Coderchinmay-wq/Golden-drawn-Lunar-mission-browser-final/blob/bfd7e812105d29ab30ff5b4944533567073ec06b/PPTs%20and%20other%20docs/google%20drive%20link%20for%20all%20folders.md))
+- [Presentations]([PPTs%20and%20other%20docs/Golden%20Drawn%20LUNAR%20PPT.pptx](https://github.com/Coderchinmay-wq/Golden-drawn-Lunar-mission-browser-final/blob/bfd7e812105d29ab30ff5b4944533567073ec06b/PPTs%20and%20other%20docs/google%20drive%20link%20for%20all%20folders.md)
 - [Datasets & Sources](PPTs%20and%20other%20docs/Sources%20datas%20link.md)
 
 ## 💻 Source Code
