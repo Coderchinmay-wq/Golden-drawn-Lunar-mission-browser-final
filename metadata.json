@@ -1,5 +1,5 @@
 {
-  "name": "CLPS Lunar Mission Browser",
+  "name": "Chandrahasa CLPS Lunar Mission",
   "description": "NASA Space Apps 2026 lunar south pole solar illumination, Direct-to-Earth (DTE) visibility, LOLA terrain horizon masking, and landing window planner.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
