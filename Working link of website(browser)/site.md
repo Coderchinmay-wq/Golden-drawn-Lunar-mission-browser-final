@@ -1,0 +1,1 @@
+https://chandrahas-clps.onrender.com/?mode=simple&tab=timeline&start=2027-03-01T00%3A00%3A00Z&end=2027-03-15T00%3A00%3A00Z&step=60&horizon=terrain&margin=0&panel=vertical_tracking&days=14&sites=%5B%7B%22id%22%3A%22shackleton_rim%22%7D%5D
