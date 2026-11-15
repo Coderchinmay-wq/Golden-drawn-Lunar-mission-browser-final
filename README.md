@@ -30,23 +30,33 @@ An interactive lunar south pole mission planning and educational observatory bui
 
 ## Mathematical Formulation
 
-### 1. Body-Fixed `MOON_ME` to Local Topocentric East-North-Up (ENU)
+### 1. Body-Fixed MOON_ME to Local Topocentric East-North-Up (ENU)
+
 For a site at planetocentric latitude $\phi$, east longitude $\lambda$, and height $h$ above $R_{\text{moon}} = 1737.4\text{ km}$:
-- $\mathbf{U} = [\cos\phi\cos\lambda,\; \cos\phi\sin\lambda,\; \sin\phi]$
-- $\mathbf{E} = [-\sin\lambda,\; \cos\lambda,\; 0]$
-- $\mathbf{N} = [-\sin\phi\cos\lambda,\; -\sin\phi\sin\lambda,\; \cos\phi]$
-- $\mathbf{V}_{\text{topo}} = \mathbf{V}_{\text{target, MOON\_ME}} - (R_{\text{moon}} + h)\mathbf{U}$
-- $\text{Azimuth} = \operatorname{atan2}(\mathbf{V}_{\text{topo}}\cdot\mathbf{E},\; \mathbf{V}_{\text{topo}}\cdot\mathbf{N}) \bmod 360^\circ$
-- $\text{Elevation} = \operatorname{atan2}(\mathbf{V}_{\text{topo}}\cdot\mathbf{U},\; \sqrt{(\mathbf{V}_{\text{topo}}\cdot\mathbf{E})^2 + (\mathbf{V}_{\text{topo}}\cdot\mathbf{N})^2})$
+
+$$\mathbf{U} = [\cos\phi \cos\lambda,\; \cos\phi \sin\lambda,\; \sin\phi]$$
+
+$$\mathbf{E} = [-\sin\lambda,\; \cos\lambda,\; 0]$$
+
+$$\mathbf{N} = [-\sin\phi \cos\lambda,\; -\sin\phi \sin\lambda,\; \cos\phi]$$
+
+$$\mathbf{V}_{\text{topo}} = \mathbf{V}_{\text{target, MOON\_ME}} - (R_{\text{moon}} + h)\mathbf{U}$$
+
+$$\text{Azimuth} = \text{atan2}(\mathbf{V}_{\text{topo}}\cdot\mathbf{E},\; \mathbf{V}_{\text{topo}}\cdot\mathbf{N}) \bmod 360^\circ$$
+
+$$\text{Elevation} = \text{atan2}\left(\mathbf{V}_{\text{topo}}\cdot\mathbf{U},\; \sqrt{(\mathbf{V}_{\text{topo}}\cdot\mathbf{E})^2 + (\mathbf{V}_{\text{topo}}\cdot\mathbf{N})^2}\right)$$
 
 ### 2. Solar Disk Visible Fraction ($R_\odot \approx 0.2666^\circ$)
-With $\Delta e = e_\odot - e_{\text{horizon}}$ and $u = \operatorname{clamp}(\Delta e / R_\odot, -1, 1)$:
+
+With $\Delta e = e_\odot - e_{\text{horizon}}$ and $u = \text{clamp}(\Delta e / R_\odot, -1, 1)$:
+
 $$f_{\text{visible}} = \frac{1}{2} + \frac{\arcsin(u) + u\sqrt{1 - u^2}}{\pi}$$
 
 ### 3. Terrain Horizon Ray-Marching (Lunar Curvature)
-Sampling out to $150\text{ km}$ along each $1^\circ$ azimuth bin:
-$$e_{\text{terrain}}(d) = \operatorname{atan2}\left(h_{\text{target}} - h_{\text{obs}} - \frac{d^2}{2 R_{\text{moon}}},\; d\right)$$
 
+Sampling out to $150\text{ km}$ along each $1^\circ$ azimuth bin:
+
+$$e_{\text{terrain}}(d) = \text{atan2}\left(h_{\text{target}} - h_{\text{obs}} - \frac{d^2}{2 R_{\text{moon}}},\; d\right)$$
 ---
 
 ## Setup & Running
