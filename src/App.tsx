@@ -396,7 +396,7 @@ export default function App() {
           }}
           className="text-base lg:text-lg font-bold tracking-tight text-slate-100 whitespace-nowrap shrink-0"
         >
-          Chandrahasa
+          🌕 Chandrahasa CLPS Lunar Browser
         </a>
 
         <nav
