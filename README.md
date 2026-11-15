@@ -7,11 +7,10 @@ An interactive lunar south pole mission planning and educational observatory bui
 
 ## 📂 Project Resources
 
-- [Documentation](Golden_Drawn_LUNAR_PPT/)
-- [Presentations](Golden_Drawn_LUNAR_PPT/)
-- [Research Papers](Sources_data_link)
-- [Screenshots and Diagrams](assets/)
-- [Datasets](data/)
+- [Documentation](?)
+- [Presentations](Golden_Drawn_LUNAR_PPT.pptx/)
+- [Screenshots and Diagrams](?)
+- [Datasets](Sources_data_link.md/)
 
 ## 💻 Source Code
 - Frontend: [src/](src/)
@@ -107,3 +106,4 @@ docker compose up --build
 - **Artemis III Candidate Regions**: Coordinates grounded against NASA Artemis III landing region literature.
 
 ---
+AI used in this projects - [source](AI_used_in_projects.md/) 
