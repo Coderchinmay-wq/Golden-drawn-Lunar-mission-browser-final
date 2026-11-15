@@ -1,6 +1,22 @@
-# CLPS Lunar Mission Browser (Chandrahasa CLPS)
+# CLPS Lunar Mission Browser (Chandrahasa CLPS Lunar Browser)
 
 An interactive lunar south pole mission planning and educational observatory built for the **NASA Space Apps Challenge 2026**. Pick candidate NASA Artemis / CLPS landing sites and date ranges to inspect Sun illumination, Direct-to-Earth (DTE) radio line-of-sight windows, LRO LOLA terrain horizon masking, and optimal launch dates.
+
+## 🚀 Live Website
+[Open CLPS Lunar Mission Browser](https://chandrahas-clps.onrender.com/?mode=simple&tab=timeline&start=2027-03-01T00%3A00%3A00Z&end=2027-03-15T00%3A00%3A00Z&step=60&horizon=terrain&margin=0&panel=vertical_tracking&days=14&sites=%5B%7B%22id%22%3A%22shackleton_rim%22%7D%5D)
+
+## 📂 Project Resources
+
+- [Documentation](Golden_Drawn_LUNAR_PPT/)
+- [Presentations](Golden_Drawn_LUNAR_PPT/)
+- [Research Papers](Sources_data_link)
+- [Screenshots and Diagrams](assets/)
+- [Datasets](data/)
+
+## 💻 Source Code
+- Frontend: [src/](src/)
+- Backend: [backend/](backend/)
+- Server: [server/](server/)
 
 ---
 
@@ -91,10 +107,3 @@ docker compose up --build
 - **Artemis III Candidate Regions**: Coordinates grounded against NASA Artemis III landing region literature.
 
 ---
-
-## 2-Minute Demo Video Script
-1. **0:00–0:20 (Hook & Simple Mode)**: Open on *Shackleton Crater Rim* in Simple Mode. Show the instant plain-English answer ("Is it sunny? Can it see Earth?") and scrub the timeline bar.
-2. **0:20–0:45 (3D Sky Dome & Libration)**: Switch to *Sky View*, press *Animate*, and orbit the 3D dome to show the Sun skimming the crater horizon while Earth traces a vertical ±7° libration loop.
-3. **0:45–1:15 (Compare & Expert Mode)**: Toggle *Expert Mode*, select *Malapert Massif* and *Mons Mouton* on the South Pole Map, and open *Compare* to contrast solar persistence vs. Earth DTE uptime and longest darkness hours.
-4. **1:15–1:40 (Landing Date Finder & Validation)**: Open *Landing Date Finder* to scan 2027, click the peak emerald cell to snap the window, then show the *Validation* tab proving `< 0.01°` agreement with JPL Horizons.
-5. **1:40–2:00 (Educator Mode & Export)**: Trigger *Share Link*, download the one-page *PDF Brief*, and spotlight *Educator Lessons* for classrooms.
