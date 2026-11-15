@@ -8,7 +8,7 @@ An interactive lunar south pole mission planning and educational observatory bui
 ## 📂 Project Resources
 
 - [Documentation](?)
-- [Presentations](Golden_Drawn_LUNAR_PPT.pptx/)
+- [Presentations](GoldenDrawnLUNARPPT.pptx/)
 - [Screenshots and Diagrams](?)
 - [Datasets](Sources_data_link.md/)
 
