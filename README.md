@@ -53,7 +53,7 @@ $$\mathbf{E} = [-\sin\lambda,\; \cos\lambda,\; 0]$$
 
 $$\mathbf{N} = [-\sin\phi \cos\lambda,\; -\sin\phi \sin\lambda,\; \cos\phi]$$
 
-$$\mathbf{V}_{\text{topo}} = \mathbf{V}_{\text{target, MOON\_ME}} - (R_{\text{moon}} + h)\mathbf{U}$$
+$$\mathbf{V}_{\text{topo}} = \mathbf{V}_{\text{target, MOON\-ME}} - (R_{\text{moon}} + h)\mathbf{U}$$
 
 $$\text{Azimuth} = \text{atan2}(\mathbf{V}_{\text{topo}}\cdot\mathbf{E},\; \mathbf{V}_{\text{topo}}\cdot\mathbf{N}) \bmod 360^\circ$$
 
